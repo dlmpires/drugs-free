@@ -1,0 +1,104 @@
+#stats {
+  position: relative;
+
+  width: calc(100% - 78px);
+  left: 78px;
+
+  z-index: 2;
+
+  background-color: var(--colorPrimary);
+  color: var(--colorContrast);
+}
+
+#stats .charts-div {
+  padding-top: 6vh;
+  width: 90%;
+  margin: auto;
+}
+
+#stats h2 {
+  font-size: 2.5rem;
+  color: var(--colorContrast);
+  margin-bottom: 2vh;
+}
+
+#stats p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--colorContrast);
+  margin-bottom: 4vh;
+}
+
+#stats .list-container {
+  width: fit-content;
+  margin-left: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5vh 4vw;
+  background-color: var(--colorPrimaryDark);
+  border-radius: 10px;
+  box-shadow: inset -1px -1px 25px 0 var(--colorShadow);
+}
+
+#most-deadly-drug-chart .chart {
+  display: grid;
+  grid-template-columns: auto;
+  gap: .6em 0;
+  align-items: center;
+  list-style-type: none;
+  grid-auto-columns: 1fr;
+  font-weight: bolder;
+}
+
+#most-deadly-drug-chart .chart.labels {
+  margin-right: 2vw;
+}
+
+#most-deadly-drug-chart .chart.data li {
+  background-color: var(--colorContrast);
+  color: var(--colorPrimary);
+  padding: 0.25rem 0.5rem;
+  grid-column-start: 1;
+  text-align: end;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+}
+
+#accident-multiplier-chart section {
+  padding: 1.5rem 1.5rem 2rem;
+  border: 2px solid var(--colorPrimary);
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+#accident-multiplier-chart .chart {
+  display: grid;
+  gap: 0 1em;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-auto-rows: .3fr;
+  grid-auto-columns: .3fr;
+}
+
+#accident-multiplier-chart li {
+  color: var(--colorPrimary);
+  background: var(--colorContrast);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  padding: 0.5rem 0.25rem;
+  height: 100%;
+  text-align: center;
+  width: 14vh;
+  font-size: .7rem;
+  font-weight: bold;
+  border-radius: 7px 7px 0 0;
+}
+
+#accident-multiplier-chart li span {
+  font-size: 1.1rem;
+}

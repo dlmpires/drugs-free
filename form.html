@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DrugsFree ・ Formulário</title>
+        <link rel='icon' href='./assets/img/favicon.png'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <!-- Styles -->
+        <link rel='stylesheet' href='assets/css/main.css'>
+        <link rel='stylesheet' href='assets/css/nav.css'>
+        <link rel='stylesheet' href='assets/css/header.css'>
+        <link rel='stylesheet' href='assets/css/form.css'>
+        <link rel='stylesheet' href='assets/css/footer.css'>
+        <link rel="stylesheet" href="assets/css/popup.css">
+
+        <!-- Icons Scripts -->
+        <script src='https://kit.fontawesome.com/7bb3e51c90.js' crossorigin='anonymous'></script>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <nav class='sidebar'>
+            <div class='logo-details'>
+                <i class='fa-solid fa-cannabis icon'></i>
+                <div class='logo_name'>DrugsFree</div>
+                <i class='fa-solid fa-bars' id='sidebar-btn'></i>
+            </div>
+            <ul class='nav-list-upper'>
+                <li>
+                    <a href='./index.html'>
+                        <i class='fa-solid fa-house'></i>
+                        <span class='links_name'>Página Inicial</span>
+                    </a>
+                    <span class='tooltip'>Página Inicial</span>
+                </li>
+                <li>
+                    <a href='./stats.html'>
+                        <i class='fa-solid fa-chart-simple'></i>
+                        <span class='links_name'>Estatísticas</span>
+                    </a>
+                    <span class='tooltip'>Estatísticas</span>
+                </li>
+                <li>
+                    <a href='./form.html'>
+                        <i class='fa-solid fa-file-pen'></i>
+                        <span class='links_name'>Formulário</span>
+                    </a>
+                    <span class='tooltip'>Formulário</span>
+                </li>
+                <li>
+                    <a href='./drugs.html'>
+                        <i class="fa-solid fa-list"></i>
+                        <span class='links_name'>Lista de Drogas</span>
+                    </a>
+                    <span class='tooltip'>Lista de Drogas</span>
+                </li>
+                <li>
+                    <a href='./help.html'>
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <span class='links_name'>Recursos</span>
+                    </a>
+                    <span class='tooltip'>Recursos</span>
+                </li>
+            </ul>
+            <ul class='nav-list-lower'>
+                <li>
+                    <a id='aboutUs' class="cursor-pointer">
+                        <i class='fa-sharp fa-solid fa-circle-info'></i>
+                        <span class='links_name'>Sobre Nós</span>
+                    </a>
+                    <span class='tooltip'>Sobre Nós</span>
+                </li>
+                <li>
+                    <a id='themeSwitcher' class="cursor-pointer">
+                        <i id='themeIcon' class='fa-solid fa-sun'></i>
+                        <span class='links_name'>Tema</span>
+                    </a>
+                    <span class='tooltip'>Tema</span>
+                </li>
+            </ul>
+        </nav>
+
+        <section class='intro'>
+            <h1><i class='fa-solid fa-file-pen'></i> Formulário</h1>
+        </section>
+
+        <section class='skip'>
+            <a href='#form'><i class='fa-solid fa-angles-down'></i></a>
+        </section>
+
+        <img id='faderImage' src='./assets/img/svg/fader-dark-theme.svg'>
+        
+        <section id='form'><br>
+        <form class="formDrogas" name="formDrogas" id="Form">
+
+                <h1 class="textCenter">Recolha de Dados</h1>
+                <!-- Progress Bar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-step progress-step-active" data-title="Dados"></div>
+                    <div class="progress-step" data-title="Experiência"></div>
+                    <div class="progress-step" data-title="Texto"></div>
+                    <div class="progress-step" data-title="Conclusão"></div>
+                </div>
+
+                <!-- First Page -->
+                <div id="firstStep" class="form-step form-step-active">
+                    <div class="inputGroup">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" autocomplete="off">
+                    </div>
+                    <div class="inputGroup">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" autocomplete="off">
+                    </div>
+                    <div class="inputGroup">
+                        <label for="idade">Idade</label>
+                        <input type="number" name="idade" id="idade" autocomplete="off">
+                    </div>
+                    <div>
+                        <a data-form-step-id="firstStep" class="btn btn-proximo widht-50 ml-auto">Próximo</a>
+                    </div>
+                </div>
+
+                <!-- Second Page -->
+                <div id="secondStep" class="form-step">
+                    <div class="inputGroup">
+                        <div class="checkboxDiv cbx1Div">
+                            <input class="inpCbx mainCbx" id="cbx-1" type="checkbox" style="display: none;"/>
+                            <label class="cbx" for="cbx-1">
+                                <span class='form-checkbox'></span>
+                                <span>Já experimentaste alguma droga?</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="checkboxDiv cbx2Div">
+                            <input class="inpCbx otherCbx" id="cbx-2" type="checkbox" style="display: none;" disabled/>
+                            <label class="cbx" for="cbx-2">
+                                <span class='form-checkbox'></span>
+                                <span >Experimentaste por pressão social?</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="checkboxDiv cbx3Div">
+                            <input class="inpCbx otherCbx" id="cbx-3" type="checkbox" style="display: none;" disabled/>
+                            <label class="cbx" for="cbx-3">
+                                <span class='form-checkbox'></span>
+                                <span>Arrependeste de ter experimentado?</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="inputGroup">
+                        <div class="checkboxDiv cbx4Div">
+                            <input class="inpCbx otherCbx" id="cbx-4" type="checkbox" style="display: none;" disabled/>
+                            <label class="cbx" for="cbx-4">
+                            <span class='form-checkbox'></span>
+                            <span>Foi uma droga ilegal?</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btnGroup">
+                        <a class="btn btn-anterior">Anterior</a>
+                        <a data-form-step-id="secondStep" class="btn btn-proximo">Próximo</a>
+                    </div>
+                </div>
+
+                <!-- Third Page -->
+                <div id="thirdStep" class="form-step">
+                    <div class="txtareaDiv">
+                        <p>Nesta caixa de texto, pedimos que dês a tua opinião sobre drogas, e se ja tiveres experimentado, a tua experiencia com as mesmas! 🙀👩‍🌾</p><br>
+                        <textarea placeholder="Drogas são..."></textarea><br><br>
+                    </div>
+                    <div class="btnGroup">
+                        <a class="btn btn-anterior">Anterior</a>
+                        <a data-form-step-id="thirdStep" class="btn btn-proximo btn-concluir">Concluir</a>
+                    </div>
+                </div>
+
+                <!-- Fourth Page -->
+                <div id="fourthStep" class="form-step">
+                    <p>Agradecemos por responderes a este formulário, com a tua resposta entendemos melhor o uso de estupefacientes e opiniões sobre os mesmos, sempre com o intuito de reduzir danos.<br><br>Esperamos que tenhas um feliz ano novo, e não te esqueças, a droga leva-te até as nuvens mas não te oferece paraquedas! 🪂</p><br>
+                    <div class="btnGroup">
+                        <a class="btn btn-resetar">Resetar</a>
+                    </div>
+                </div>
+        </form>
+        </section>
+
+        <footer>
+            <p>2023 © ・ Diogo Pires & Guilherme Garcia ・ 👹</p>
+        </footer>
+
+        <section id='popUpSections'></section>
+
+        <!-- JS Scripts -->
+        <script src='https://code.jquery.com/jquery-3.6.1.js' integrity='sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=' crossorigin='anonymous'></script>
+        <script src='assets/js/sideBar.js'></script>
+        <script src='assets/js/darkMode.js'></script>
+        <script src="assets/js/form.js"></script>
+        <script src="assets/js/includeFiles.js"></script>
+    </body>
+</html>

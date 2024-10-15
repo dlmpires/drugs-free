@@ -1,0 +1,70 @@
+#resources {
+  position: relative;
+  display: flex;
+
+  width: calc(100% - 78px);
+  left: 78px;
+
+  justify-content: center;
+
+  z-index: 2;
+
+  background-color: var(--colorPrimary);
+  color: var(--colorContrast);
+}
+
+#resources h2 {
+  font-size: 2.5rem;
+  color: var(--colorContrast);
+  margin: 2vh 0 -7vh 0;
+}
+
+.resources-list {
+  width: 70vw;
+  margin: 5vh 0;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  color: var(--colorPrimary);
+  font-weight: bolder;
+}
+
+.resources-list tr {
+  height: 15vh;
+  background-color: var(--colorContrast);
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.resources-list tr td:first-child {
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+}
+
+.resources-list tr td:last-child {
+  border-top-right-radius: 0.9rem;
+  border-bottom-right-radius: 0.9rem;
+}
+
+.resources-list .tIcon {
+  width: 10%;
+  border-right: 6px dashed var(--colorPrimaryDark);
+  line-height: 10px;
+}
+
+.resources-list .tIcon.help {
+  border-right: none;
+  border-left: 6px dashed var(--colorPrimaryDark);
+}
+
+.resources-list .tIcon img {
+  height: 15vh;
+  width: 15vh;
+  padding: 1.2rem;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.resources-list .tDesc {
+  width: 85%;
+  padding: 0 2vw;
+}
