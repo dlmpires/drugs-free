@@ -1,5 +1,6 @@
 # drugs-free
 
+<b>live website: [dlmpires/drugs-free](dlmpires.github.io/drugs-free/)</b><br>
 DrugsFree was a school project created by dlmpires and gmsgarcia to educate users about drugs and advocate safe practices.
 
 # Overview
